@@ -1,0 +1,1 @@
+!include $ONL_TEMPLATES/no-platform-modules.yml VENDOR=stordis BASENAME=x86-64-stordis-bf2556x-1t ARCH=amd64

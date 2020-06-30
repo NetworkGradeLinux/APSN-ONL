@@ -1,0 +1,2 @@
+!include $ONL_TEMPLATES/platform-config-platform.yml ARCH=amd64 VENDOR=stordis BASENAME=x86-64-stordis-bf2556x-1t REVISION=r0
+
