@@ -62,7 +62,7 @@
         <port instance="56" type="sfp"/>
     </port_config>
 
-    <I2C bus="0">
+    <I2C bus="2">
             <device name="baseboard-eeprom" slave="0x56">
                 <function type="eeprom" drv="EEPROM">
                     <resource type="onie-eeprom" res_name="baseboard-eeprom" offset="0x800" dlen="256" alen="2">
