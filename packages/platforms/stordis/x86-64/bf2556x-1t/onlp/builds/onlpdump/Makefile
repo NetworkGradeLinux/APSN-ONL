@@ -18,39 +18,8 @@
 #
 # </bsn.cl>
 ############################################################
-#
-#
-#
-############################################################
-# include $(ONL)/make/config.amd64.mk
-
-# .DEFAULT_GOAL := onlpdump
-
-# MODULE := onlpdump
-# include $(BUILDER)/standardinit.mk
-
-# DEPENDMODULES := AIM IOF onlp x86_64_stordis_bf2556x_1t onlplib onlp_platform_defaults sff cjson cjson_util timer_wheel OS
-
-# include $(BUILDER)/dependmodules.mk
-
-# BINARY := onlpdump
-# $(BINARY)_LIBRARIES := $(LIBRARY_TARGETS)
-# include $(BUILDER)/bin.mk
-
-# GLOBAL_CFLAGS += -DAIM_CONFIG_AIM_MAIN_FUNCTION=onlpdump_main
-# GLOBAL_CFLAGS += -DAIM_CONFIG_INCLUDE_MODULES_INIT=1
-# GLOBAL_CFLAGS += -DAIM_CONFIG_INCLUDE_MAIN=1
-# #GLOBAL_LINK_LIBS += -lpthread -lm
-# LIBDPAPI := $(ONL)/packages/platforms/stordis/x86-64/dpapi/libdpapi.a
-# GLOBAL_LINK_LIBS += -lpthread -lm $(LIBDPAPI) -ldl -lz
-
-
-# include $(BUILDER)/targets.mk
-
-# # PLATFORM := x86-64-stordis-bf2556x-1t
-# # include $(ONL)/packages/base/any/onlp/builds/platform/onlps.mk
 
 PLATFORM := x86-64-stordis-bf2556x-1t
 LIBDPAPI := $(ONL)/packages/platforms/stordis/x86-64/dpapi/libdpapi.a
-GLOBAL_LINK_LIBS += $(LIBDPAPI) -ldl -lz
 include $(ONL)/packages/base/any/onlp/builds/platform/onlps.mk
+GLOBAL_LINK_LIBS += $(LIBDPAPI) -ldl -lz
