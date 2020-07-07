@@ -8,6 +8,6 @@ class OnlPlatform_x86_64_stordis_bf2556x_1t_r0(OnlPlatformStordis,
     SYS_OBJECT_ID=".25560.1"
     
     def baseconfig(self):
-        
+        self.insmod('irq_debug')
         return True
 

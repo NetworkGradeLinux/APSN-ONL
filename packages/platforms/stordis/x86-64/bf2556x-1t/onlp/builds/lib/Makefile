@@ -21,31 +21,33 @@
 #
 #
 ############################################################
-include $(ONL)/make/config.amd64.mk
+# include $(ONL)/make/config.amd64.mk
 
-MODULE := libonlp-x86-64-stordis-bf2556x-1t
-include $(BUILDER)/standardinit.mk
+# MODULE := libonlp-x86-64-stordis-bf2556x-1t
+# include $(BUILDER)/standardinit.mk
 
-DEPENDMODULES := AIM IOF x86_64_stordis_bf2556x_1t onlplib
-DEPENDMODULE_HEADERS := sff
+# DEPENDMODULES := AIM IOF x86_64_stordis_bf2556x_1t onlplib
+# DEPENDMODULE_HEADERS := sff
 
-include $(BUILDER)/dependmodules.mk
+# include $(BUILDER)/dependmodules.mk
 
-SHAREDLIB := libonlp-x86-64-stordis-bf2556x-1t.so
-$(SHAREDLIB)_TARGETS := $(ALL_TARGETS)
-include $(BUILDER)/so.mk
-.DEFAULT_GOAL := $(SHAREDLIB)
+# SHAREDLIB := libonlp-x86-64-stordis-bf2556x-1t.so
+# $(SHAREDLIB)_TARGETS := $(ALL_TARGETS)
+# include $(BUILDER)/so.mk
+# .DEFAULT_GOAL := $(SHAREDLIB)
 
-GLOBAL_CFLAGS += -I$(onlp_BASEDIR)/module/inc
-GLOBAL_CFLAGS += -DAIM_CONFIG_INCLUDE_MODULES_INIT=1 
-#GLOBAL_CFLAGS += -Wnoerror=unused-function -Wnoerror=unused-function
-GLOBAL_CFLAGS += -fPIC
+# GLOBAL_CFLAGS += -I$(onlp_BASEDIR)/module/inc
+# GLOBAL_CFLAGS += -DAIM_CONFIG_INCLUDE_MODULES_INIT=1 
+# #GLOBAL_CFLAGS += -Wnoerror=unused-function -Wnoerror=unused-function
+# GLOBAL_CFLAGS += -fPIC
+# LIBDPAPI := $(ONL)/packages/platforms/stordis/x86-64/dpapi/libdpapi.a
+# GLOBAL_LINK_LIBS += -lpthread -ldl -lz $(LIBDPAPI)
+
+# include $(BUILDER)/targets.mk
+
+
+
+PLATFORM := x86-64-stordis-bf2556x-1t
 LIBDPAPI := $(ONL)/packages/platforms/stordis/x86-64/dpapi/libdpapi.a
-GLOBAL_LINK_LIBS += -lpthread -ldl -lz $(LIBDPAPI)
-
-include $(BUILDER)/targets.mk
-
-
-
-# PLATFORM := x86-64-stordis-bf2556x-1t
-# include $(ONL)/packages/base/any/onlp/builds/platform/libonlp-platform.mk
+GLOBAL_LINK_LIBS += $(LIBDPAPI) -ldl -lz
+include $(ONL)/packages/base/any/onlp/builds/platform/libonlp-platform.mk
