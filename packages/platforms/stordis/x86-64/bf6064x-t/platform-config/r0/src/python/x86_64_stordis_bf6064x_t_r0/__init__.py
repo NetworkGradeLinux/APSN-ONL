@@ -9,4 +9,5 @@ class OnlPlatform_x86_64_stordis_bf6064x_t_r0(OnlPlatformStordis,
     SYS_OBJECT_ID = ".6064"
 
     def baseconfig(self):
+        self.insmod('irq_debug')
         return True
