@@ -114,7 +114,8 @@ this anyway):
 Make sure you are no longer running in the ONL docker shell (this is done by 
 running onlbuilder), and you are at the repository root:
 
-    git clean -xf # Cleans the repository, including files in .gitignore
+    git clean -xd # Cleans untracked directories, including files in .gitignore
+    git clean -xf # Cleans untracked files, including files in .gitignore
     git reset --hard # Revert any changes to files back to last commit, forcibly
 
 If you are breaking builds frequently, this might save you up to 30 seconds per
