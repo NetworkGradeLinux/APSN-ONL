@@ -1,2 +1,2 @@
-FILTER=src
+FILTER=x86_64_stordis_bf2556x_1t
 include $(ONL)/make/subdirs.mk
