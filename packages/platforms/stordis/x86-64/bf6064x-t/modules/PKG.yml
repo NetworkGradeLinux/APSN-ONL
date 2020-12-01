@@ -1,1 +1,1 @@
-!include $ONL_TEMPLATES/no-platform-modules.yml ARCH=amd64 VENDOR=stordis BASENAME=x86-64-stordis-bf6064x-t
+!include $ONL_TEMPLATES/platform-modules.yml VENDOR=stordis BASENAME=x86-64-stordis-bf6064x-t ARCH=amd64 KERNELS="onl-kernel-4.19-lts-x86-64-all:amd64"
